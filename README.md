@@ -1,7 +1,7 @@
 # Bike Sharing Dashboard ✨
 
 ## Deskripsi Proyek
-Proyek ini merupakan analisis data dari dataset Bike Sharing untuk memahami pola peminjaman sepeda berdasarkan tipe hari, waktu, serta kondisi lingkungan. Hasil analisis disajikan dalam bentuk notebook dan dashboard interaktif.
+Proyek ini merupakan analisis data dari dataset Bike Sharing untuk memahami pola peminjaman sepeda berdasarkan tipe hari, waktu, serta kondisi lingkungan. Hasil analisis disajikan dashboard interaktif.
 
 ## Struktur Folder
 - `/dashboard`: Berisi file dashboard Streamlit dan dataset.
@@ -10,15 +10,28 @@ Proyek ini merupakan analisis data dari dataset Bike Sharing untuk memahami pola
 - `requirements.txt`: Daftar library python yang dibutuhkan.
 
 ## Persiapan Lingkungan
-Cukup jalankan perintah berikut untuk menginstal semua library yang dibutuhkan:
+### 1. Masuk ke Direktori Proyek
+Buka terminal lalu masuk ke folder project ini:
 ```bash
+cd Analisis-Data
+```
+
+### 2. Menggunakan Anaconda
+```bash
+conda create --name main-ds python=3.11
+conda activate main-ds
+pip install -r requirements.txt
+```
+
+### 2. Menggunakan Virtual Environment (venv)
+```bash
+python -m venv venv
+source venv/bin/activate  # Untuk macOS/Linux
+venv\Scripts\activate     # Untuk Windows
 pip install -r requirements.txt
 ```
 
 ## Menjalankan Aplikasi Streamlit
-Masuk ke direktori utama proyek dan jalankan:
+jalankan perintah berikut di direktori utama:
 ```bash
 streamlit run dashboard/dashboard.py
-```
-
-

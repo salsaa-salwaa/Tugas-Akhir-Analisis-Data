@@ -92,7 +92,7 @@ with tab2:
         st.subheader("Pengaruh Cuaca")
         weather_df = main_df.groupby("weather_label", observed=True)["cnt"].mean().sort_values(ascending=False)
         fig3, ax3 = plt.subplots()
-        weather_df.plot(kind="bar", color='#7986CB', ax=ax3)
+        weather_df.plot(kind="bar", color='#B2CEFE', ax=ax3)
         ax3.set_ylabel("Rata-rata")
         st.pyplot(fig3)
 
@@ -100,7 +100,7 @@ with tab2:
         st.subheader("Pengaruh Suhu")
         temp_df = main_df.groupby('temp_category', observed=True)['cnt'].mean().reset_index()
         fig4, ax4 = plt.subplots()
-        sns.barplot(x='cnt', y='temp_category', data=temp_df, palette='magma', ax=ax4)
+        sns.barplot(x='cnt', y='temp_category', data=temp_df, palette='coolwarm', ax=ax4)
         ax4.set_xlabel("Rata-rata Rental")
         st.pyplot(fig4)
 
